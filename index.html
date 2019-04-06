@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IT or Pokemon</title>
+</head>
+<body>
+    <h1>Is it a Pokemon or IT related name?</h1>
+    <button onclick="startNewQuiz()">Start new quiz</button>
+
+    <h2 id="name"></h2>
+    <button onclick="answer(0)">Pokemon</button>
+    <button onclick="answer(1)">IT</button>
+
+    <p>
+        <span id="result"></span>
+        <a id="link" href="#" target="_blank"></a>
+        <span id="description"></span>
+    </p>
+    <button onclick="loadQuestion()">Next question</button>
+    <h3>Score: <span id="score"></span></h3>
+
+    <script src="main.js"></script>
+</body>
+</html>
