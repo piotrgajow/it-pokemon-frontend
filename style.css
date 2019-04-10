@@ -1,0 +1,11 @@
+#question {
+    max-width: 60vw;
+}
+
+.btn-answer {
+    min-width: 100px;
+}
+
+.score {
+    width: 100px;
+}

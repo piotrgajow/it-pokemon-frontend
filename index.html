@@ -3,23 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <title>IT or Pokemon</title>
+
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous"
+    >
+    <link rel="stylesheet"
+          href="style.css"
+    >
 </head>
 <body>
-    <h1>Is it a Pokemon or IT related name?</h1>
-    <button onclick="startNewQuiz()">Start new quiz</button>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand"
+           href="#"
+        >
+            Is it a Pokemon or IT related name?
+        </a>
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <button class="btn btn-success"
+                        onclick="startNewQuiz()"
+                >
+                    Start new quiz
+                </button>
+            </li>
+        </ul>
+        <span class="navbar-text score">
+            Score: <span id="score">0</span>
+        </span>
+    </nav>
+    <main id="question"
+          class="container shadow mt-5 py-5 invisible"
+    >
+        <div class="row">
+            <div class="col">
+                <h1 id="name"
+                    class="display-4 text-center"
+                >
+                </h1>
+                <p class="text-center">
+                    <span id="result"></span>
+                    <a id="link"
+                       class="text-white"
+                       href="#"
+                       target="_blank"></a>
+                    <span id="description"></span>
+                </p>
+            </div>
+        </div>
+        <div class="row pt-5">
+            <div class="col text-center">
+                <button class="btn btn-info btn-answer"
+                        onclick="answer(0)">Pokemon</button>
+            </div>
+            <div class="col text-center">
+                <button class="btn btn-info btn-answer"
+                        onclick="answer(1)">IT</button>
+            </div>
+        </div>
+        <div id="next-question"
+             class="row pt-5 invisible">
+            <div class="col text-center">
+                <button class="btn btn-info"
+                        onclick="loadQuestion()">Next question</button>
+            </div>
+        </div>
+    </main>
 
-    <h2 id="name"></h2>
-    <button onclick="answer(0)">Pokemon</button>
-    <button onclick="answer(1)">IT</button>
-
-    <p>
-        <span id="result"></span>
-        <a id="link" href="#" target="_blank"></a>
-        <span id="description"></span>
-    </p>
-    <button onclick="loadQuestion()">Next question</button>
-    <h3>Score: <span id="score"></span></h3>
+    <div class="modal fade"
+         id="quizEndedModal"
+         tabindex="-1"
+         role="dialog"
+         aria-hidden="true">
+        <div class="modal-dialog"
+             role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        Quiz finished!
+                    </h5>
+                    <button type="button"
+                            class="close"
+                            data-dismiss="modal"
+                            aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Correct answers: <span id="modal-score"></span>!
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
 </body>
 </html>
