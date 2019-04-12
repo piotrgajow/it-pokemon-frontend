@@ -12,7 +12,7 @@ const LINK_ELEMENT = document.getElementById('link');
 const DESCRIPTION_ELEMENT = document.getElementById('description');
 const SCORE_ELEMENT = document.getElementById('score');
 const QUESTION_ELEMENT = document.getElementById('question');
-const ANSWER_ELEMENTS = document.querySelectorAll('.btn-answer');
+const ANSWER_ELEMENTS = [document.getElementById('btn-answer-0'), document.getElementById('btn-answer-1')];
 const NEXT_QUESTION_ELEMENT = document.getElementById('next-question');
 const MODAL_SCORE_ELEMENT = document.getElementById('modal-score');
 

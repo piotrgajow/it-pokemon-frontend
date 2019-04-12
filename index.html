@@ -36,39 +36,39 @@
     <main id="question"
           class="container shadow mt-5 py-5 invisible"
     >
-        <div class="row">
-            <div class="col">
-                <h1 id="name"
-                    class="display-4 text-center"
-                >
-                </h1>
-                <p class="text-center">
-                    <span id="result"></span>
-                    <a id="link"
-                       class="text-white"
-                       href="#"
-                       target="_blank"></a>
-                    <span id="description"></span>
-                </p>
-            </div>
+        <div class="grid-wrapper">
+            <h1 id="name"
+                class="display-4 text-center"
+            >
+            </h1>
+            <p class="text-center">
+                <span id="result"></span>
+                <a id="link"
+                   class="text-white"
+                   href="#"
+                   target="_blank"></a>
+                <span id="description"></span>
+            </p>
+            <button id="btn-answer-0"
+                    class="btn btn-info"
+                    onclick="answer(0)"
+            >
+                Pokemon
+            </button>
+            <button id="btn-answer-1"
+                    class="btn btn-info"
+                    onclick="answer(1)"
+            >
+                IT
+            </button>
+            <button id="next-question"
+                    class="btn btn-info"
+                    onclick="loadQuestion()"
+            >
+                Next question
+            </button>
         </div>
-        <div class="row pt-5">
-            <div class="col text-center">
-                <button class="btn btn-info btn-answer"
-                        onclick="answer(0)">Pokemon</button>
-            </div>
-            <div class="col text-center">
-                <button class="btn btn-info btn-answer"
-                        onclick="answer(1)">IT</button>
-            </div>
-        </div>
-        <div id="next-question"
-             class="row pt-5 invisible">
-            <div class="col text-center">
-                <button class="btn btn-info"
-                        onclick="loadQuestion()">Next question</button>
-            </div>
-        </div>
+
     </main>
 
     <div class="modal fade"

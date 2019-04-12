@@ -2,10 +2,32 @@
     max-width: 60vw;
 }
 
-.btn-answer {
-    min-width: 100px;
-}
-
 .score {
     width: 100px;
+}
+
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+#name {
+    grid-area: 1 / 1 / 2 / -1;
+}
+
+.grid-wrapper > p {
+    grid-area: 2 / 1 / 3 / -1;
+}
+
+#btn-answer-0 {
+    grid-area: 3 / 2 / 4 / 6;
+}
+
+#btn-answer-1 {
+    grid-area: 3 / -2 / 4 / -6;
+}
+
+#next-question {
+    grid-area: 3 / 5 / 4 / -5;
 }
