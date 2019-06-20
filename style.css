@@ -1,37 +1,39 @@
-#question {
+main {
     max-width: 60vw;
+}
+
+.question {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+#name {
+    flex: 1 1 auto;
+}
+
+.details {
+    flex: 0 0 20px;
+}
+
+.buttons {
+    flex: 1 1 auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
 }
 
 .score {
     width: 100px;
 }
 
-.grid-wrapper {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-}
-
-#name {
-    grid-area: 1 / 1 / 2 / -1;
-}
-
-.grid-wrapper > p {
-    grid-area: 2 / 1 / 3 / -1;
-}
-
 .btn-big {
     font-size: 1.5rem;
 }
 
-#btn-answer-0 {
-    grid-area: 3 / 2 / 4 / 6;
+.buttons button {
+    flex: 0 1 200px;
 }
 
-#btn-answer-1 {
-    grid-area: 3 / -2 / 4 / -6;
-}
-
-#next-question {
-    grid-area: 3 / 5 / 4 / -5;
+.hidden {
+    display: none;
 }
