@@ -21,6 +21,8 @@ let score = 0;
 const STATE_NO_QUIZ = 0;
 const STATE_QUESTION = 1;
 const STATE_RESULT = 2;
+const POKEMON = 0;
+const IT = 1;
 let state = STATE_NO_QUIZ;
 
 function url(endpoint) {
@@ -61,6 +63,14 @@ async function loadQuestion() {
     } else {
         alert(result.error);
     }
+}
+
+function answerPokemon() {
+    answer(POKEMON);
+}
+
+function answerIT() {
+    answer(IT);
 }
 
 async function answer(choice) {
@@ -158,10 +168,10 @@ window.addEventListener('keyup', (event) => {
     console.log(event);
     switch (event.key) {
         case "ArrowLeft":
-            answer(0);
+            answer(POKEMON);
             break;
         case "ArrowRight":
-            answer(1);
+            answer(IT);
             break;
         case " ":
             nextQuestion();
