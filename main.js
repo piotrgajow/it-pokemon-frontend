@@ -1,6 +1,6 @@
 let quizId;
 
-const API = 'http://localhost:8090';
+const API = 'http://it-pokemon.webappcraft.com:8090';
 
 const CLASS_INVISIBLE = 'hidden';
 const CLASS_CORRECT = 'bg-success';
